@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:riot_api_app/pages/account_page.dart';
 import 'package:riot_api_app/pages/main_menu_page.dart';
 
 final List<Locale> supportedLocales = [
@@ -7,7 +8,12 @@ final List<Locale> supportedLocales = [
   const Locale('fr'),
 ];
 
+void initServices() {}
+
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  initServices();
+
   runApp(
     EasyLocalization(
       supportedLocales: supportedLocales,
@@ -26,7 +32,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MainMenuPage(),
+      initialRoute: MainMenuPage.routeName,
+      routes: {
+        AccountPage.routeName: (context) => AccountPage(),
+      },
     );
   }
 }

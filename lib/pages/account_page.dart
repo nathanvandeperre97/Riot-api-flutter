@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
-class MainMenuPage extends StatefulWidget {
-  MainMenuPage({Key key}) : super(key: key);
+class AccountPage extends StatefulWidget {
+  static const routeName = "/account";
+
+  AccountPage({Key key}) : super(key: key);
 
   @override
-  _MainMenuPageState createState() => _MainMenuPageState();
+  _AccountPageState createState() => _AccountPageState();
 }
 
-class _MainMenuPageState extends State<MainMenuPage> {
+class _AccountPageState extends State<AccountPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
