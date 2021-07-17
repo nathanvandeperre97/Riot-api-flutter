@@ -1,4 +1,5 @@
 {
     "main_menu_title": "Menu principal",
-    "account_menu_button": "Informations du compte"
+    "account_menu_button": "Informations du compte",
+    "account_menu_title": "Informations du compte"
 }

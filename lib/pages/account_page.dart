@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:riot_api_flutter/utils/colors.dart';
 
 class AccountPage extends StatefulWidget {
   static const routeName = "/account";
@@ -15,11 +16,16 @@ class _AccountPageState extends State<AccountPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("LOREM IPSUM"),
+        backgroundColor: AppColors().backgroundColor,
+        title: Text(
+          "account_menu_title".tr(),
+          style: TextStyle(color: AppColors().textColor),
+        ),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          children: [],
         ),
       ),
     );

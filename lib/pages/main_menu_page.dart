@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:riot_api_flutter/utils/colors.dart';
 
 class MainMenuPage extends StatefulWidget {
   static const routeName = "/main_menu";
@@ -15,7 +16,11 @@ class _MainMenuPageState extends State<MainMenuPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("main_menu_title".tr()),
+        backgroundColor: AppColors().backgroundColor,
+        title: Text(
+          "main_menu_title".tr(),
+          style: TextStyle(color: AppColors().textColor),
+        ),
       ),
       body: Center(
         child: Column(
@@ -31,14 +36,13 @@ class _MainMenuPageState extends State<MainMenuPage> {
       ElevatedButton(
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-          primary: Colors.blue,
-          onPrimary: Colors.yellow,
+          primary: AppColors().backgroundColor,
         ),
         onPressed: () => Navigator.of(context).pushNamed("/account"),
         child: Text(
           "account_menu_button".tr(),
           style: TextStyle(
-            color: Colors.white,
+            color: AppColors().textColor,
             fontSize: 12,
           ),
         ),
