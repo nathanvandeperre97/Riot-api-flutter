@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.riot_api_app">
+    package="com.example.riot_api_flutter">
    <application
-        android:label="riot_api_app"
+        android:label="riot_api_flutter"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

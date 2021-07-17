@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:riot_api_app/pages/account_page.dart';
-import 'package:riot_api_app/pages/main_menu_page.dart';
+import 'package:riot_api_flutter/pages/account_page.dart';
+import 'package:riot_api_flutter/pages/main_menu_page.dart';
 
 final List<Locale> supportedLocales = [
   const Locale('en'),

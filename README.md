@@ -1,4 +1,4 @@
-# riot_api_app
+# riot_api_flutter
 
 A new Flutter project.
 
