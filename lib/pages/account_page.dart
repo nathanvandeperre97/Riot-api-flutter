@@ -34,6 +34,7 @@ class _AccountPageState extends State<AccountPage> {
 
   Widget searchSummoner(BuildContext context, SummonerDtoProvider provider) {
     return Scaffold(
+      backgroundColor: AppColors().backgroundColor,
       appBar: AppBar(
         backgroundColor: AppColors().backgroundColor,
         title: Text(
@@ -41,42 +42,39 @@ class _AccountPageState extends State<AccountPage> {
           style: TextStyle(color: AppColors().textColor),
         ),
       ),
-      body: Container(
-        color: AppColors().backgroundColor,
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.only(left: 48.0, right: 48.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "summonerName_textfield".tr(),
-                  style: TextStyle(
-                    color: AppColors().textColor,
-                    fontSize: 24,
-                  ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.only(left: 48.0, right: 48.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "summonerName_textfield".tr(),
+                style: TextStyle(
+                  color: AppColors().textColor,
+                  fontSize: 24,
                 ),
-                TextFormField(
-                  decoration: const InputDecoration(
-                    fillColor: Color(0xfffbc02d),
-                    filled: true,
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(90.0)),
-                        borderSide: BorderSide(color: Color(0xfffbc02d))),
-                    contentPadding: EdgeInsets.symmetric(horizontal: 12.0),
-                  ),
-                  style: const TextStyle(
-                    fontSize: 20,
-                    color: Color(0xff00838f),
-                  ),
-                  textInputAction: TextInputAction.done,
-                  onFieldSubmitted: (text) {
-                    provider.summonerName = text;
-                    provider.getSummonerDto();
-                  },
+              ),
+              TextFormField(
+                decoration: const InputDecoration(
+                  fillColor: Color(0xfffbc02d),
+                  filled: true,
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(90.0)),
+                      borderSide: BorderSide(color: Color(0xfffbc02d))),
+                  contentPadding: EdgeInsets.symmetric(horizontal: 12.0),
                 ),
-              ],
-            ),
+                style: const TextStyle(
+                  fontSize: 20,
+                  color: Color(0xff00838f),
+                ),
+                textInputAction: TextInputAction.done,
+                onFieldSubmitted: (text) {
+                  provider.summonerName = text;
+                  provider.getSummonerDto();
+                },
+              ),
+            ],
           ),
         ),
       ),
@@ -86,6 +84,7 @@ class _AccountPageState extends State<AccountPage> {
   Widget printSummoner(BuildContext context, SummonerDtoProvider provider,
       SummonerDto summonerDto) {
     return Scaffold(
+      backgroundColor: AppColors().backgroundColor,
       appBar: AppBar(
         actions: [popupMenuButton(provider)],
         backgroundColor: AppColors().backgroundColor,
@@ -94,24 +93,25 @@ class _AccountPageState extends State<AccountPage> {
           style: TextStyle(color: AppColors().textColor),
         ),
       ),
-      body: Container(
-        color: AppColors().backgroundColor,
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.only(left: 36.0, right: 36.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                printAccountId(summonerDto),
-                printAccountPuuid(summonerDto),
-                printRevisionDate(summonerDto),
-                printProfileIconId(summonerDto),
-                printName(summonerDto),
-                printSummonerId(summonerDto),
-                printSummonerLevel(summonerDto)
-              ],
-            ),
-          ),
+      body: Padding(
+        padding: const EdgeInsets.only(left: 36.0, right: 36.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            printAccountId(summonerDto),
+            SizedBox(height: 2),
+            printAccountPuuid(summonerDto),
+            SizedBox(height: 2),
+            printRevisionDate(summonerDto),
+            SizedBox(height: 2),
+            printProfileIconId(summonerDto),
+            SizedBox(height: 2),
+            printName(summonerDto),
+            SizedBox(height: 2),
+            printSummonerId(summonerDto),
+            SizedBox(height: 2),
+            printSummonerLevel(summonerDto)
+          ],
         ),
       ),
     );
