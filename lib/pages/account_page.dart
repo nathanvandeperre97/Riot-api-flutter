@@ -97,19 +97,20 @@ class _AccountPageState extends State<AccountPage> {
         padding: const EdgeInsets.only(left: 36.0, right: 36.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             printAccountId(summonerDto),
-            SizedBox(height: 2),
+            SizedBox(height: 12),
             printAccountPuuid(summonerDto),
-            SizedBox(height: 2),
+            SizedBox(height: 12),
             printRevisionDate(summonerDto),
-            SizedBox(height: 2),
+            SizedBox(height: 12),
             printProfileIconId(summonerDto),
-            SizedBox(height: 2),
+            SizedBox(height: 12),
             printName(summonerDto),
-            SizedBox(height: 2),
+            SizedBox(height: 12),
             printSummonerId(summonerDto),
-            SizedBox(height: 2),
+            SizedBox(height: 12),
             printSummonerLevel(summonerDto)
           ],
         ),
@@ -119,9 +120,14 @@ class _AccountPageState extends State<AccountPage> {
 
   Column printAccountId(SummonerDto summonerDto) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text("account_id".tr(),
-            style: const TextStyle(fontSize: 16, color: Color(0xfffbc02d))),
+            style: const TextStyle(
+                fontSize: 16,
+                color: Color(0xfffbc02d),
+                decoration: TextDecoration.underline)),
         Text(summonerDto.accountId,
             style: const TextStyle(fontSize: 16, color: Color(0xfffbc02d)))
       ],
@@ -130,9 +136,14 @@ class _AccountPageState extends State<AccountPage> {
 
   Column printAccountPuuid(SummonerDto summonerDto) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text("puuid".tr(),
-            style: const TextStyle(fontSize: 16, color: Color(0xfffbc02d))),
+            style: const TextStyle(
+                fontSize: 16,
+                color: Color(0xfffbc02d),
+                decoration: TextDecoration.underline)),
         Text(summonerDto.puuid,
             style: const TextStyle(fontSize: 16, color: Color(0xfffbc02d)))
       ],
@@ -140,11 +151,19 @@ class _AccountPageState extends State<AccountPage> {
   }
 
   Column printRevisionDate(SummonerDto summonerDto) {
+    var date =
+        DateTime.fromMillisecondsSinceEpoch(summonerDto.revisionDate * 1000);
+
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text("revisionDate".tr(),
-            style: const TextStyle(fontSize: 16, color: Color(0xfffbc02d))),
-        Text(summonerDto.revisionDate.toString(),
+            style: const TextStyle(
+                fontSize: 16,
+                color: Color(0xfffbc02d),
+                decoration: TextDecoration.underline)),
+        Text(date.toString(),
             style: const TextStyle(fontSize: 16, color: Color(0xfffbc02d)))
       ],
     );
@@ -152,9 +171,14 @@ class _AccountPageState extends State<AccountPage> {
 
   Column printProfileIconId(SummonerDto summonerDto) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text("profileIconId".tr(),
-            style: const TextStyle(fontSize: 16, color: Color(0xfffbc02d))),
+            style: const TextStyle(
+                fontSize: 16,
+                color: Color(0xfffbc02d),
+                decoration: TextDecoration.underline)),
         Text(summonerDto.profileIconId.toString(),
             style: const TextStyle(fontSize: 16, color: Color(0xfffbc02d)))
       ],
@@ -163,9 +187,14 @@ class _AccountPageState extends State<AccountPage> {
 
   Column printName(SummonerDto summonerDto) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text("name".tr(),
-            style: const TextStyle(fontSize: 16, color: Color(0xfffbc02d))),
+            style: const TextStyle(
+                fontSize: 16,
+                color: Color(0xfffbc02d),
+                decoration: TextDecoration.underline)),
         Text(summonerDto.name,
             style: const TextStyle(fontSize: 16, color: Color(0xfffbc02d)))
       ],
@@ -174,9 +203,14 @@ class _AccountPageState extends State<AccountPage> {
 
   Column printSummonerId(SummonerDto summonerDto) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text("id".tr(),
-            style: const TextStyle(fontSize: 16, color: Color(0xfffbc02d))),
+            style: const TextStyle(
+                fontSize: 16,
+                color: Color(0xfffbc02d),
+                decoration: TextDecoration.underline)),
         Text(summonerDto.id,
             style: const TextStyle(fontSize: 16, color: Color(0xfffbc02d)))
       ],
@@ -185,9 +219,14 @@ class _AccountPageState extends State<AccountPage> {
 
   Column printSummonerLevel(SummonerDto summonerDto) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text("summonerLevel".tr(),
-            style: const TextStyle(fontSize: 16, color: Color(0xfffbc02d))),
+            style: const TextStyle(
+                fontSize: 16,
+                color: Color(0xfffbc02d),
+                decoration: TextDecoration.underline)),
         Text(summonerDto.summonerLevel.toString(),
             style: const TextStyle(fontSize: 16, color: Color(0xfffbc02d)))
       ],
