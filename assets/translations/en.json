@@ -1,5 +1,14 @@
 {
     "main_menu_title": "Main menu",
     "account_menu_button": "Account informations",
-    "account_menu_title": "Account informations"
+    "account_menu_title": "Account informations",
+    "summonerName_textfield": "Enter a summoner name",
+    "change_summoner_dto": "Change summoner",
+    "account_id": "Account id : ",
+    "puuid": "Account puuid : ",
+    "revisionDate": "Account last update date : ",
+    "profileIconId": "Summoner profile icon id : ",
+    "name": "Summoner name : ",
+    "id": "Summoner id : ",
+    "summonerLevel": "Summoner level : "
 }
