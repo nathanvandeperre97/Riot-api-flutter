@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class MainMenuPage extends StatefulWidget {
   static const routeName = "/main_menu";
@@ -14,7 +15,7 @@ class _MainMenuPageState extends State<MainMenuPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("LOREM IPSUM"),
+        title: Text("main_menu_title".tr()),
       ),
       body: Center(
         child: Column(
@@ -35,7 +36,7 @@ class _MainMenuPageState extends State<MainMenuPage> {
         ),
         onPressed: () => Navigator.of(context).pushNamed("/account"),
         child: Text(
-          "LOREM IPSUM",
+          "account_menu_button".tr(),
           style: TextStyle(
             color: Colors.white,
             fontSize: 12,
