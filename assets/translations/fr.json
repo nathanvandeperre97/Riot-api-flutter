@@ -10,5 +10,7 @@
     "profileIconId": "Id de l'icone d'invocateur : ",
     "name": "Nom d'invocateur : ",
     "id": "Id d'invocateur : ",
-    "summonerLevel": "Niveau d'invocateur : "
+    "summonerLevel": "Niveau d'invocateur : ",
+    "unexistant_summoner": "Cet invocateur n'existe pas",
+    "global_error": "Une erreur s'est produite"
 }

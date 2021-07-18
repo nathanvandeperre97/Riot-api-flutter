@@ -10,5 +10,7 @@
     "profileIconId": "Summoner profile icon id : ",
     "name": "Summoner name : ",
     "id": "Summoner id : ",
-    "summonerLevel": "Summoner level : "
+    "summonerLevel": "Summoner level : ",
+    "unexistant_summoner": "The summoner doesn't exist",
+    "global_error": "An error occured"
 }

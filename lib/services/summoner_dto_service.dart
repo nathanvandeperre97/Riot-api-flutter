@@ -11,8 +11,11 @@ class SummonerDtoService {
   }
 
   Future<SummonerDto> fetchSummonerDto(String summonerName) async {
-    _summonerDto = await _riotApiDao.getSummonerDto(summonerName);
-    return _summonerDto;
+    final response = await _riotApiDao.getSummonerDto(summonerName);
+    if (response.statusCode == 200) {
+      _summonerDto = response;
+    }
+    return response;
   }
 
   void changeSummoner() {

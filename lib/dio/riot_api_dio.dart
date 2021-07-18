@@ -18,6 +18,7 @@ class RiotApiDao {
         '${this.url}/lol/summoner/v4/summoners/by-name/$summonerName');
     var response = await http.get(requestUrl, headers: {"X-Riot-Token": token});
     var body = jsonDecode(response.body) as Map<String, dynamic>;
+    var statusCode = response.statusCode;
 
     return Future.value(SummonerDto(
         accountId: body["accountId"],
@@ -26,6 +27,7 @@ class RiotApiDao {
         name: body["name"],
         id: body["id"],
         puuid: body["puuid"],
-        summonerLevel: body["summonerLevel"]));
+        summonerLevel: body["summonerLevel"],
+        statusCode: statusCode));
   }
 }

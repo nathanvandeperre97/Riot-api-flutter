@@ -6,6 +6,7 @@ class SummonerDto {
   String id;
   String puuid;
   int summonerLevel;
+  int statusCode;
 
   SummonerDto(
       {this.accountId,
@@ -14,5 +15,6 @@ class SummonerDto {
       this.name,
       this.id,
       this.puuid,
-      this.summonerLevel});
+      this.summonerLevel,
+      this.statusCode});
 }
